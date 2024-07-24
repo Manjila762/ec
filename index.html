@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+
+    <title>ecommerce</title>
+
+    <!-- <style>
+        .mainli:hover .subli {
+          display: block;
+        }
+      </style> -->
+  </head>
+
+  <body class="showcart top-0 bottom-0 right-0 ">
+    <nav class="bg-white flex justify-between items-center px-5">
+      <!-- logo container -->
+      <div>
+        <img class="animate-bounce w-24" src="images/logoo.png" />
+      </div>
+
+      <!-- list- container -->
+
+      <div>
+        <ul class="flex gap-8 cursor-pointer">
+          <li class="hover:text-slate-400">Home</li>
+          <li class="hover:text-slate-400">About Us</li>
+          <li class="hover:text-slate-400">Contact Us</li>
+          <li class="hover:text-slate-400"><a target="_blank" href="checkout.html">Checkout</a></li>
+          <li class="hover:text-slate-400"><a target="_blank" href="form.html">Form</a></li>
+          <span class="ml-20">
+
+            <button class="mr-5 bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-1 px-4 border border-black hover:border-transparent rounded"><a target="_blank"href="login.html">Login</a></button>
+           <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-1 px-4 border border-black hover:border-transparent rounded"><a target="_blank"href="login.html">Signup</a></button>
+          </span>
+ 
+          <div class="cart-icon">
+            <svg class="cursor-pointer h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+            </svg>
+
+            <span class="flex justify-center w-[20px] h-[20px] bg-red-500 items-center rounded-3xl absolute top-[4%] right-[-10]">0</span>
+          </div>
+     
+        </ul>
+
+      </div>
+
+    
+
+      <!-- search container -->
+      <div class="flex gap-2 bg-white rounded-md px-2 py-1">
+        <img
+          class="w-7 cursor-pointer border-r pr-1"
+          src="images/icons8-search-50.png"
+        />
+        <input
+          class="focus:outline-none w-full pl-2"
+          placeholder="Search"
+          type="text"
+        />
+      </div>
+    </nav>
+    <!-- parent -->
+    <div class="rounded-3xl flex w-full h-[600px] bg-slate-200">
+      <!-- child1 -->
+      <div class="w-[280px]">
+        <ul>
+          <li class="p-3 mainli group hover:cursor-pointer">
+            <p>Lehenga</p>
+            <ul class="group-hover:block hidden subli bg-gray-100">
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Blouse</p>
+              </li>
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Skirt</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="p-3 group hover:cursor-pointer">
+            <p>Accessories</p>
+
+            <ul class="hidden group-hover:block subli bg-gray-100">
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>necklace</p>
+              </li>
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Earrings</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="p-3 group hover:cursor-pointer">
+            <p>Baby wears</p>
+
+            <ul class="hidden group-hover:block bg-gray-100">
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Rompers</p>
+              </li>
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Bodysuits</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="p-3 group hover:cursor-pointer">
+            <p>Scrunchies</p>
+
+            <ul class="hidden group-hover:block bg-gray-100">
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Silk</p>
+              </li>
+              <li class="p-3 hover:bg-slate-300 rounded-md">
+                <p>Crochets</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- <section class="">
+        <div class="size-96 translate-x-44 flex justify-center items-center">
+          <h1 class="text-xl font-serif">Outfits to shine</h1>
+        </div>
+      </section> -->
+
+      <section class="w-[800px] flex">
+        <div class="size-96 translate-x-44 flex justify-center items-center">
+          <h1 class="text-xl font-serif">Outfits to shine</h1>
+      </section>
+
+      <!-- slider -->
+        <div class=" w-[800px] rounded-lg ">
+
+          <div id="slides">
+            <img id="image" class="object-cover ml-44 h-[550px]" src="images/default.png" alt="default image">
+
+          </div>
+
+          <div class="flex justify-center">
+
+            <div id="prev-btn" class="hover:cursor-pointer  px-3 "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+            
+  
+            </div>
+            <div id="next-btn" class="hover:cursor-pointer  px-3 "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+            
+            
+          </div>
+          
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const data=[
+      {
+        id:0,
+        image:"https://i.pinimg.com/564x/1e/c9/44/1ec944ef242d84ed437f68c2b5201fd5.jpg"
+
+      },
+      {
+        id:1,
+        image:"https://i.pinimg.com/564x/4d/98/6b/4d986babb07045676ff07f2a8ba593a4.jpg"
+
+      },
+      {
+        id:2,
+        image:"https://i.pinimg.com/564x/3f/cc/72/3fcc727b1db69ac878443ec46d034e49.jpg"
+
+      },
+      {
+        id:3,
+        image:"https://i.pinimg.com/564x/38/2d/95/382d957020ff35710221daa6f5aef922.jpg"
+        
+      },
+      {
+        id:4,
+        image:"https://i.pinimg.com/564x/3f/cc/72/3fcc727b1db69ac878443ec46d034e49.jpg"
+        
+      },
+        
+      ]
+
+      const image=document.querySelector('#image')
+      const prevbtn=document.querySelector('#prev-btn')
+      const nextbtn=document.querySelector('#next-btn')
+
+      let counter=-1;
+      // setInterval(()=>{
+      //   if(counter<data.length-1)
+      //   {
+      //     counter++;
+      //     image.src=data[counter].image
+      //   }
+
+      //   else{
+      //     counter=0;
+      //   }
+
+      // },1000)
+
+      nextbtn.addEventListener('click',()=>{
+        if(counter<data.length-1){
+          counter++
+          
+        }
+        else{
+          counter=0
+        }
+
+      image.src=data[counter].image
+
+      })
+
+      prevbtn.addEventListener('click',()=>{
+        if(counter===0){
+          counter=data.length-1
+        }
+        else{
+          counter--
+        }
+
+        console.log(counter);
+        image.src=data[counter].image
+
+      })
+     
+//cart
+
+
+    </script>
+
+    <!--  featured commnet section -->
+    <section>
+      <h1 class="text-center">Our Products</h1>
+    </section>  
+
+    <section class="flex w-[70%] ml-44 flex-wrap justify-evenly gap-x-14 pb-10 ">
+      
+     
+      
+      <div
+        class="bg-slate-200 mb-8 pb-2 shadow-xl rounded-lg w-[310px] flex flex-col justify-center items-center gap-y-4"
+      >
+        <img
+          class="pl-4 h-40 w-40 object-contain"
+          src="images/pic1.png"
+          alt=""
+        />
+        <div class="">
+          <p class="font-bold">Button-up shirt</p>
+          <p>Price : <span class="text-gray-500">$ 200</span></p>
+          <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-2 px-4 border mt-3 ml-2 border-black hover:border-transparent rounded ">
+            Add to cart
+
+           
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="bg-slate-200 pb-2 shadow-xl mb-8 rounded-lg w-[310px] flex flex-col justify-center items-center gap-y-4"
+      >
+        <img
+          class="pl-4 h-40 w-40 object-contain"
+          src="images/earrings.png"
+          alt=""
+        />
+        <div class="">
+          <p class="font-bold">Earings</p>
+          <p>Price : <span class="text-gray-500">$5</span></p>
+          <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-2 px-4 border mt-3 ml-2 border-black hover:border-transparent rounded">
+            Add to cart
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="bg-slate-200 pb-2 shadow-xl mb-8 rounded-lg w-[310px] flex flex-col justify-center items-center gap-y-4"
+      >
+        <img
+          class="pl-4 h-40 w-48 object-contain"
+          src="images/rompers.png"
+          alt=""
+        />
+        <div class="">
+        <p class="font-bold">Rompers</Ri:a></p>
+          <p>Price : <span class="text-gray-500">$ 25 </span></p>
+          <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-2 px-4 border mt-3 ml-2 border-black hover:border-transparent rounded">
+            Add to cart
+          </button>
+          
+        </div>
+      </div>
+      <div
+        class="bg-slate-200 pb-2 mb-8 shadow-xl rounded-lg w-[310px] flex flex-col justify-center items-center gap-y-4"
+      >
+        <img
+          class="pl-3 h-40 w-40 object-contain"
+          src="images/skirt.png"
+          alt=""
+        />
+        <div class="">
+          <p class="font-bold">Skirt</p>
+          <p>Price : <span class="te">$10 </span></p>
+          <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-2 px-4 border mt-3 ml-2 border-black hover:border-transparent rounded">
+            Add to cart
+          </button>
+          
+         
+         
+        </div>
+      </div>
+      <div
+        class="bg-slate-200 pb-2 shadow-xl  mb-8 rounded-lg w-[310px] flex flex-col justify-center items-center gap-y-4"
+      >
+        <img
+          class="pl-3 h-40 w-40 object-contain"
+          src="images/scrunchie.png"
+          alt=""
+        />
+        <div class="">
+          <p class="font-bold">Scrunchie</p>
+          <p>Price : <span class="te">$15 </span></p>
+          <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-2 px-4 border mt-3 ml-2 border-black hover:border-transparent rounded">
+            Add to cart
+          </button>
+          
+         
+        </div>
+      </div>
+      <div
+        class="bg-slate-200 pb-2 shadow-xl mb-8 rounded-lg w-[310px] flex flex-col justify-center items-center gap-y-4"
+      >
+        <img
+          class="pl-3 h-40 w-40 object-contain"
+          src="images/coat (1).png"
+          alt=""
+        />
+        <div class="">
+          <p class="font-bold">Coat</p>
+          <p>Price : <span class="te">$ 30 </span></p>
+          <button class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-2 px-4 border mt-3 ml-2 border-black hover:border-transparent rounded">
+            Add to cart
+          </button>
+          
+         
+        </div>
+      </div>
+     
+    
+     
+    </section>
+<!-- sign of cart -->
+ <section class="">
+    <div class="cart-tab  w-[400px]  bg-slate-200 fixed top-0 bottom-0 right-[-400px] ">
+      <!-- left part shopping cart -->
+      <!-- <h1 class="font-bold ml-8">Shopping cart</h1>
+      list cart
+     <div class="list-cart">
+        <div class="item grid grid-cols-4 text-center items-center" >
+          <div class="image">
+            <img class="w-[60%] " src="images/coat (1).png" alt="">
+          </div>
+          <div class="name">
+            name:coat
+          </div>
+          <div class="price">
+            Rs:2800
+          </div>
+          <div class="quantity">
+            <span class="plus"><</span>
+            <span>1</span>
+            <span class="plus">></span>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="btn mt-4 ml-6">
+        <button class="close h-10 w-19 px-8 mb-3 rounded-md bg-white">close</button>
+        <button class="checkout px-8 py-2 bg-white rounded-md">checkout</button> -->
+
+      <!-- </div> --> 
+      
+    </div>
+  </section>
+
+    <footer class="bg-slate-200 h-28">
+      <p class="pt-4 pl-4"> © 2024 Harati. All rights reserved.</p>
+
+      <p class="pl-8">You can also find us on...</p>
+
+      <div class="pl-6">
+
+        <a target="_blank"   style="color:black; padding-left:1em;" href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        <a target="_blank"style="color:black; padding-left:1em;" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a target="_blank"style="color:black; padding-left:1em;" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+
+      </div>  
+
+
+    </footer>
+  </body>
+</html>

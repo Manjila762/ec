@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Form Validation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body class="bg-slate-200 p-5">
+    <!-- NAv -->
+    <nav class="bg-white flex justify-between items-center px-5">
+      <!-- logo container -->
+      <div>
+        <img class="animate-bounce w-24" src="images/logoo.png" />
+      </div>
+
+      <!-- list- container -->
+
+      <div>
+        <ul class="flex gap-8 cursor-pointer">
+          <li class="hover:text-slate-400">Home</li>
+          <li class="hover:text-slate-400">About Us</li>
+          <li class="hover:text-slate-400">Contact Us</li>
+          <li class="hover:text-slate-400">
+            <a target="_blank" href="checkout.html">Checkout</a>
+          </li>
+          <li class="hover:text-slate-400">
+            <a target="_blank" href="form.html">Form</a>
+          </li>
+          <span class="ml-20">
+            <button
+              class="mr-5 bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-1 px-4 border border-black hover:border-transparent rounded"
+            >
+              <a target="_blank" href="login.html">Login</a>
+            </button>
+            <button
+              class="bg-transparent hover:bg-slate-400 text-black-700 font-semibold hover:text-white py-1 px-4 border border-black hover:border-transparent rounded"
+            >
+              <a target="_blank" href="login.html">Signup</a>
+            </button>
+          </span>
+
+          <div class="cart-icon">
+            <svg
+              class="cursor-pointer h-6 w-6"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+              />
+            </svg>
+
+            <span
+              class="flex justify-center w-[20px] h-[20px] bg-red-500 items-center rounded-3xl absolute top-[4%] right-[-10]"
+              >0</span
+            >
+          </div>
+        </ul>
+      </div>
+
+      <!-- search container -->
+      <div class="flex gap-2 bg-white rounded-md px-2 py-1">
+        <img
+          class="w-7 cursor-pointer border-r pr-1"
+          src="images/icons8-search-50.png"
+        />
+        <input
+          class="focus:outline-none w-full pl-2"
+          placeholder="Search"
+          type="text"
+        />
+      </div>
+    </nav>
+    <h1 class="text-2xl font-bold mb-5 ml-[40%]">Form</h1>
+    <div class="container flex items-center justify-center">
+      <form id="checkoutForm" class="bg-white p-5 w-72 rounded-lg shadow-md">
+        <div class="mb-4">
+          <label class="block text-gray-700" for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="mt-1 p-2 w-full border rounded-md"
+            required
+          />
+          <span class="text-red-500 text-sm hidden" id="nameError"
+            >Please enter your name</span
+          >
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="mt-1 p-2 w-full border rounded-md"
+            required
+          />
+          <span class="text-red-500 text-sm hidden" id="emailError"
+            >Please enter a valid email</span
+          >
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            class="mt-1 p-2 w-full border rounded-md"
+            required
+          />
+          <span class="text-red-500 text-sm hidden" id="addressError"
+            >Please enter your address</span
+          >
+        </div>
+        <button
+          type="submit"
+          class="bg-slate-400 text-white px-4 py-2 rounded-lg"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#checkoutForm").on("submit", function (e) {
+          e.preventDefault();
+
+          let isValid = true;
+
+          if ($("#name").val().trim() === "") {
+            $("#nameError").show();
+            isValid = false;
+          } else {
+            $("#nameError").hide();
+          }
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test($("#email").val().trim())) {
+            $("#emailError").show();
+            isValid = false;
+          } else {
+            $("#emailError").hide();
+          }
+
+          if ($("#address").val().trim() === "") {
+            $("#addressError").show();
+            isValid = false;
+          } else {
+            $("#addressError").hide();
+          }
+
+          if (isValid) {
+            alert("Form submitted successfully!");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+[
+  {
+      "id": 1,
+      "name":" Button-up shirt",
+      "price": 200,
+      "image": "images/pic1.png"
+  },
+  {
+      "id": 2,
+      "name":"Rompers",
+      "price": 25,
+      "image": "images/rompers.png"
+  },
+  {
+      "id": 3,
+      "name":"lehenga",
+      "price": 2,
+      "image": "images/lehenga.png"
+  },
+  {
+      "id": 4,
+      "name":" Scrunchie",
+      "price": 15,
+      "image": "images/scrunchie.png"
+  },
+  {
+      "id": 5,
+      "name":" Skirt",
+      "price": 10,
+      "image": "images/skirt.png"
+  },
+  {
+      "id": 6,
+      "name":" Earrings",
+      "price": 5,
+      "image": "images/earrings.png"
+  }
+  
+ 
+
+]
